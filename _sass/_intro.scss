@@ -1,0 +1,60 @@
+.intro {
+	@include background-image('intro-bg.jpg', $intro-background-color);
+
+	&.section {
+			padding-top: 120px;
+	}
+  	
+	h3 {
+		font-size:19px;
+		color:$theme-color1;
+		margin:0 0 20px 0;
+		text-align:left;
+		font-family:'Lato';
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	
+	h1 {
+		font-size:40px;
+		color:$header-color;
+		line-height: 52px;
+		margin:0 0 26px 0;
+		font-family:'Dosis';
+		text-align:left;
+		font-weight:700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+    @include medium-2 {
+			font-size:24px;
+    }
+    
+    @include medium {
+			font-size:29px;
+			line-height: 44px;
+	  }
+
+    @include small {
+		  font-size:20px;
+			line-height: 36px;
+    }    
+	}
+	
+	p{
+		font-size:18px;
+		color:$theme-color4;
+		margin:0 0 30px 0;
+		line-height: 26px;
+		font-family:'Lato';
+
+		@include small {
+		  font-size:16px;
+    }  
+	}
+	
+	.learn_more{
+		display: block;
+		@include action-button;
+	}
+}

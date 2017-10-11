@@ -1,0 +1,82 @@
+@mixin essential-icon($index){
+  &.icon#{$index}{
+    border-color: $theme-color2;  
+    span {
+      background:$theme-color2;
+      &:hover{
+        background  : $theme-color1;  
+      }
+    }
+    &:hover{
+      border-color: $theme-color1;  
+    }
+  }
+}
+
+.essentials{
+  background:$essentials-background-color;
+
+  .essential_icon{
+    border:2px solid;
+    border-radius:50%;
+    width:90px;
+    height:90px;
+    margin:0px auto 25px;
+    span {
+      border: 3px solid #fff;
+      border-radius: 50%;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    
+    @include essential-icon(1);
+    @include essential-icon(2);
+    @include essential-icon(3);
+    @include essential-icon(4);
+    
+    i{
+      color: #fff;
+      font-size: 40px;
+      margin-top: 0;
+      position: relative;
+      top: 20px;
+      z-index: 20;
+    }
+  }
+
+  .essential_block{
+    text-align:center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+   	@include medium-2 {
+      margin:0 0 35px 0;
+    }
+    
+    @include medium {
+      margin:0 0 20px 0;
+    } 
+
+    h2{
+      font-family: 'Dosis';
+      font-weight: 600;
+      font-size:18px;
+      color:$header-color;
+      margin:35px 0 18px;
+      a{
+        color: $header-color;
+      }
+    }
+    
+    p{
+      font-size:17px;
+      color:$body-text-color;
+      margin:0px;
+      
+      @include small {
+        font-size:16px;
+      }  
+    }
+  }
+}

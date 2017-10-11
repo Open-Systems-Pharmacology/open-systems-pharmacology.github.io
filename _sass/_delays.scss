@@ -1,0 +1,38 @@
+/* Animation Timers
+---------------------------------*/
+
+@mixin delay ($delay) {
+	animation-delay: $delay; 
+	-webkit-animation-delay: $delay; 
+}
+
+.delay-02s {
+  @include delay(0.2s) ;
+}
+.delay-03s { 
+  @include delay(0.3s) ;
+}
+.delay-04s { 
+  @include delay(0.4s) ;
+}
+.delay-05s { 
+  @include delay(0.5s);
+}
+.delay-06s { 
+  @include delay(0.6s);
+}
+.delay-07s { 
+  @include delay(0.7s);
+}
+.delay-08s { 
+  @include delay(0.8s);
+}
+.delay-09s { 
+  @include delay(0.9s);
+}
+.delay-1s { 
+  @include delay(1s);
+}
+.delay-12s { 
+  @include delay(1.2s);
+}

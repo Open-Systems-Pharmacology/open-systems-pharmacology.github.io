@@ -1,0 +1,38 @@
+<section id="examples" class="examples section">
+  <div class="container">
+    <h2>Case Studies</h2>
+    <div class="section_area">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+          <h4 class="category">Models</h4>
+          {% for example in site.examples %}
+          <div class="item-list">
+            <div class="item-col">
+              <h3><a href="{{site.github}}{{example.github_url}}" target="_blank">{{example.title}}</a></h3>
+              <p>{{example.description}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        
+        <div class="col-lg-6 col-sm-6 wow fadeInRight delay-05s">
+          <h4 class="category">Publications</h4>
+          {% for publication in site.publications %}
+          <div class="item-list">
+            <div class="item-col">
+              <h3><a href="{{publication.full_url}}" target="_blank">{{publication.title}}</a></h3>
+              <p>{{publication.description}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="action_button"> 
+        <span>Take a look at all our models</span> 
+        <a href="http://osp-models.{{site.base}}/" target="_blank">Browse</a> 
+      </div>
+      
+    </div>
+  </div>
+</section>

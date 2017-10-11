@@ -1,0 +1,23 @@
+<section id="news" class="section news">
+  <div class="news_container_outer">
+    <div class="container">
+      <h2>News &amp; Release</h2>
+      <div class="section_area">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+            {% for news in site.news reversed%}
+            <div class="item-list">
+              <div class="item-col1"><span><i class="fa fa-{{news.icon}}"></i></span></div>
+              <div class="item-col2">
+                <h3><a href="{{site.github}}{{news.github_url}}" target="_blank">{{news.title}}</a></h3>
+                <p>{{news.description}}</p>
+              </div>
+            </div>
+            {% endfor %}
+            <div class="action_button"> <span>Ready to take the plunge?</span> <a href="http://setup.{{site.base}}" target="_blank">Download</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

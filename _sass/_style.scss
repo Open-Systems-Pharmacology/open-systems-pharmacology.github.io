@@ -1,0 +1,237 @@
+
+@import "variables";
+@import "mixins";
+
+ul{ 
+	list-style:none;
+}
+
+img{ 
+	max-width:100%;
+}
+
+a {
+	color: $default-link-color;
+}
+
+a, a:hover, a:active {  
+	outline:0px !important;
+}
+
+a:hover {
+	color:$default-link-hover-color ;
+}
+
+
+/* Primary Styles
+---------------------------------*/
+body {
+	background: $body-background-color;
+	font-family: $body-font-family;
+	font-size:$body-font-size;
+	font-weight:normal;
+	color:$body-text-color;
+	margin:0;
+	
+	@include medium-2 {
+		font-size: $body-font-size-sm;
+	}
+	
+	@include medium {
+		font-size: $body-font-size-xs;
+	}
+}
+
+h2{
+	font-size:$font-size-h2;
+	color: $text-color-h2;
+	font-family:$font-family-h2;
+	font-weight:700;
+	margin:0 0 25px 0;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+
+	@include medium-2 {
+		margin-top: 35px;
+		font-size: $font-size-h2-sm;
+	}	
+
+	@include medium {
+		font-size: $font-size-h2-xs;
+	}
+}
+
+h3{
+	font-family: $font-family-h3;
+	font-weight: 600;
+	color:$text-color-h3;
+	font-size:$font-size-h3;
+	margin:0 0 5px 0;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	
+	@include medium-2 {
+		font-size: $font-size-h3-sm;
+	}	
+	@include medium {
+		font-size: $font-size-h3-xs;
+	}
+}
+
+h4{
+	text-transform:uppercase;
+	letter-spacing: 1px;
+}
+
+h6{
+	font-size:$font-size-h6;
+	color:$text-color-h6;
+	font-family: $font-family-h6;
+	font-weight:400;
+	text-align:center;
+	margin:0 0 60px 0;
+
+	@include medium-2 {
+		font-size: $font-size-h6-sm;
+	}		
+
+	@include medium {
+		font-size: $font-size-h6-xs;
+		margin-bottom:40px;
+	}
+}
+
+p{
+	line-height:24px;
+	margin:0;
+
+	@include medium-2 {
+		line-height:20px;
+	}
+
+	@include medium {
+		line-height:18px;
+	}
+	
+}
+
+.action_button{
+	padding:20px 0 0 60px;
+	
+	@include small {
+		padding-top: 0px;	
+	}
+	
+	span{
+		font-size:18px;
+		color:$action-button-text-color;
+		display:block;
+		margin:0 0 20px 0;
+	}
+	
+	a {
+		@include action-button;
+		display:block;
+	}
+
+	
+}
+
+/* Sections
+---------------------------------*/
+.section{
+	position:relative;
+	padding-top: $section-padding-top;
+	
+	@include medium-2 {
+		padding-top: $section-padding-top-sm;
+	}
+
+	@include medium {
+		padding-top: $section-padding-top-xs;
+	}
+	
+	.section_area{
+		padding: $section-area-padding;
+		
+		@include medium-2 {
+			padding: $section-area-padding-sm;
+		}
+
+		@include medium {
+			padding: $section-area-padding-xs;
+		}
+		
+	}
+}
+
+/* lists 
+---------------------------------*/
+.item-list{
+    padding:0 0 0 0;
+    font-size:15px;
+		margin-bottom:40px;
+
+		@include small {
+			font-size:14px;
+		}  
+
+		.item-col1{
+    	float:left;
+    	width:60px;
+    	text-align:center;
+			
+			i{
+      	color: $theme-color4;
+      	font-size: 19px;
+      	font-style: normal;
+				line-height: 20px;
+    	}
+  	}
+		
+		.item-col2{
+    	overflow:hidden;	
+		}
+		
+		.item-col{
+     	padding-left: 60px;
+    	overflow:hidden;	
+		}
+}
+
+
+/* Float Elements 
+---------------------------------*/
+.fl-lt {
+	float:left;
+}
+.fl-rt {
+	float:right;
+}
+
+
+/* Clear Floated Elements
+---------------------------------*/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}

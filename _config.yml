@@ -1,0 +1,38 @@
+
+title: Open Systems Pharmacology
+description: > # this means to ignore newlines until "baseurl:"
+  Reliable, powerful and easy-to-use modeling &amp; simulation tools for pharmaceutical 
+  and other life-sciences applications. Qualified and accepted by the scientific community 
+  including academia, regulatory agencies and industry. Available free to everyone.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: http://www.open-systems-pharmacology.org # the base hostname & protocol for your site, e.g. http://example.com
+base: open-systems-pharmacology.org # the base hostname & protocol for your site, e.g. http://example.com
+github: https://github.com/Open-Systems-Pharmacology/ 
+github_suite_master: https://github.com/Open-Systems-Pharmacology/Suite/blob/master/
+twitter_username: ospsuite
+github_username:  open-systems-pharmacology
+tracking_id: UA-104123195-1
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+collections:
+  news:
+    output: false
+    permalink: /:collection/:name
+  examples:
+    output: false  
+    permalink: /:collection/:name
+  tutorials:
+    output: false  
+    permalink: /:collection/:name
+  publications:
+    output: false  
+    permalink: /:collection/:name
+  

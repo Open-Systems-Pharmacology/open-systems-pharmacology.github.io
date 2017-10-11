@@ -1,0 +1,8 @@
+.examples{
+  @include background-image('examples-bg.jpg', $examples-background-color);
+
+  .category{
+    margin-bottom: 30px;
+    margin-left: 60px;
+  }  
+}

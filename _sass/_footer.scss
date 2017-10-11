@@ -1,0 +1,135 @@
+.footer {
+  background-color: $footer-background-color;
+  height: 90px;
+  color: $footer-text-color;
+  padding-top: 22px;
+  
+  @include small {
+    position: static;
+    height: auto;
+  }
+  
+  .footer-logo {        
+    @include logoimage('../img/osp_logo_white.png', 110px, 30px);
+    opacity: 0.4;
+    float: left;
+    margin-top: 9px;
+    @include easeLinear;
+    
+    @include small {
+      float: none;
+      display: block;
+      margin-bottom: 24px;
+      margin: 8px 0 12px;
+    }
+    
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+  
+  .footer-menu {
+    float: right;
+    opacity: 1;
+    color: $footer-text-color;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    
+    @include small {
+      float: none;
+      padding: 0;
+      margin-top: 0;
+      padding-bottom: 20px;
+    }
+    
+    li {
+      float: left;
+      
+      @include small {
+        float: none;
+        display: block;
+      }
+      
+      &.icon-twitter a,
+      &.icon-github a {
+        background-repeat: no-repeat;
+        background-size: 22px;
+        background-position: center;
+        text-indent: -100px;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 48px;
+        opacity: 0.4;
+        
+        &:hover,
+        &:active {
+          opacity: 1;
+        }
+        
+        @include small {
+          margin-top: 0;
+        }
+      }
+      
+      &.icon-twitter a {
+        background-image: url(/img/icon-twitter.svg);
+        @include small {
+          margin-left: 24px;
+        }
+      }
+      
+      &.icon-github {
+        
+        @include small {
+          &:before {
+            content: "Follow";
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            display: block;
+            color: $footer-text-color;
+            opacity: 0.5;
+            margin: 23px 0 17px;
+          }
+        }
+        
+        a {
+          background-image: url(/img/icon-github.svg);
+          background-size: 20px;
+          margin-left: 37px;
+          
+          @include small {
+            margin-left: 0;
+            float: left;
+          }
+        }
+      }
+    }
+    
+    a {
+      color: $footer-text-color;;
+      @include easeLinear;
+      font-size: 14px;
+      padding: 10px 11px;
+      margin-left: 22px;
+      
+      &:hover,
+      &:active {
+        color:  white;
+        text-decoration: none;
+      }
+      
+      @include small {
+        margin-left: 0;
+        display: block;
+        padding: 5px 0;
+      }
+    }
+  }
+  
+}
