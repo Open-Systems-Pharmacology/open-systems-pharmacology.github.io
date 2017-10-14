@@ -58,7 +58,7 @@
     @include easeLinear;
     
     &:focus {
-      color: $newsletter-background-color;
+      color: $newsletter-text-color;
       border-color: $newsletter-background-color;
       background: none;
     }
