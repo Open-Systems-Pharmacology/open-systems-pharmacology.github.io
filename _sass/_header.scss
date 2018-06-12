@@ -1,42 +1,49 @@
-nav{
-	background:$header-background-color;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
-  
+nav {
+  background: $header-background-color;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+
   &.navbar-default .navbar-toggle {
     border-color: $theme-color1;
     background-color: $theme-color1;
     margin-top: 20px;
+
     .icon-bar {
       background-color: #fff;
     }
+
     &:focus, &:hover {
       background-color: $theme-color1;
     }
   }
 
-  .logo{
+  .logo {
     height: 51px;
   }
 
-  .nav.navbar-nav{
+  .nav.navbar-nav {
     padding-top: 16px;
-  
-    li{
-      a{
-        display:block;
-        font-size:$font-size-navbar;
-        color:$nav-text-color;
-        font-family:$font-family-navbar;
-        text-decoration:none;
-        text-transform:uppercase;
+
+    li {
+      a {
+        display: block;
+        font-size: $font-size-navbar;
+        color: $nav-text-color;
+        font-family: $font-family-navbar;
+        text-decoration: none;
+        text-transform: uppercase;
         font-weight: 600;
         letter-spacing: 1px;
+
         @include easeLinear;
-        
-        &:hover{
+
+        @include large {
+          padding: 10px 11px;
+        }
+
+
+        &:hover {
           color: $default-link-hover-color;
         }
-        
       }
     }
   }
