@@ -1,19 +1,22 @@
 <section id="team" class="team section">
   <div class="container">
     <h2>Management Team</h2>
-    <div class="team-row">
-      <div class="team-container wow fadeInLeft delay-05s">
-        {% assign shuffled_team = site.team  | shuffle %}
-        {% for member in shuffled_team %}
-        <div class="team-member">
-          <a href="{{ member.link_url }}" target="_blank">
-            <img src="{{ member.profile_url }}" />
-            <h3 class="member-name">{{ member.name }}</h3>
-            <p class="member-description">{{ member.description }}</p>
-          </a>
+    <div class="section_area">
+      <div class="team-row">
+        <div class="team-container wow fadeInLeft delay-05s">
+          {% assign shuffled_team = site.team  | shuffle %}
+          {% for member in shuffled_team %}
+          <div class="team-member">
+            <a href="{{ member.link_url }}" target="_blank">
+              <img src="{{ member.profile_url }}" />
+              <h3 class="member-name">{{ member.name }}</h3>
+              <p class="member-description">{{ member.description }}</p>
+            </a>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
+
     </div>
   </div>
 </section>

@@ -8,7 +8,6 @@ $(document).ready(function () {
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function () {
     var navOffset = $("#navbar").height();
-    console.log(navOffset);
     $("a.page-scroll").bind("click", function (event) {
       var $anchor = $(this);
       $("html, body")
