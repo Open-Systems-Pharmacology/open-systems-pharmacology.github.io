@@ -1,0 +1,50 @@
+.team {
+  background: $team-background-color;
+
+  .team-row {
+    display: flex;
+    justify-content: center;
+    padding: 0 32px;
+    margin-bottom: 64px;
+  }
+
+  .team-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .team-member {
+    opacity: 0;
+    text-align: center;
+    margin: 20px;
+    outline: none;
+
+    img {
+      border-radius: 50%;
+    }
+
+    .member-name {
+      margin-top: 16px;
+      color: $default-link-color;
+      &:hover {
+        color: $default-link-hover-color;
+      }
+    }
+
+    .member-description {
+      color: $body-text-color;
+    }
+  }
+
+  .slick-slider .slick-list {
+    opacity: 0;
+  }
+  .slick-slider.slick-initialized .slick-list {
+    opacity: 1;
+    .team-member {
+      opacity: 1;
+    }
+  }
+}

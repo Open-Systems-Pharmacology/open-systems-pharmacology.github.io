@@ -1,20 +1,20 @@
 $theme-color1: #62bb46;
 $theme-color2: #00aeef;
-$theme-color3: #F38B00;
+$theme-color3: #f38b00;
 $theme-color4: #807f80;
 $header-color: #000000;
 $action-button-text-color: #333333;
 
-$body-text-color: $theme-color4; 
+$body-text-color: $theme-color4;
 $body-background-color: white;
 
-$text-color-h2:  $header-color;
-$text-color-h3:  $header-color;
-$text-color-h6:  $theme-color4;
+$text-color-h2: $header-color;
+$text-color-h3: $header-color;
+$text-color-h6: $theme-color4;
 
-$nav-text-color:  $header-color;
+$nav-text-color: $header-color;
 
-$section-background-color: #FFF;
+$section-background-color: #fff;
 $section-offset-background-color: #f6f6f6;
 
 $section-padding-top: 100px;
@@ -26,34 +26,32 @@ $section-area-padding-sm: 40px 0 40px;
 $section-padding-top-xs: 25px;
 $section-area-padding-xs: 25px 0 25px;
 
-
-$default-button-action-background-color :$theme-color3;
-$default-button-action-hover-color : $theme-color1;
-$default-button-action-text-color : #FFF;
-$default-link-color :  $theme-color2;
-$default-link-hover-color :  $theme-color1;
-
+$default-button-action-background-color: $theme-color3;
+$default-button-action-hover-color: $theme-color1;
+$default-button-action-text-color: #fff;
+$default-link-color: $theme-color2;
+$default-link-hover-color: $theme-color1;
 
 $header-background-color: $section-background-color;
 $intro-background-color: $section-offset-background-color;
 $essentials-background-color: $section-background-color;
 $news-background-color: $section-offset-background-color;
-$tutorials-background-color:$section-background-color;
+$tutorials-background-color: $section-background-color;
 $examples-background-color: $section-offset-background-color;
+$sponsors-background-color: $section-background-color;
+$team-background-color: $section-background-color;
 
 $newsletter-background-color: $theme-color2;
-$newsletter-text-color: #FFF;
+$newsletter-text-color: #fff;
 $footer-background-color: #444;
 $footer-text-color: #a3a3a3;
 
-
-
 /* FONTS*/
-$body-font-family: 'Lato', sans-serif;
-$font-family-h2: 'Dosis';
-$font-family-h3: 'Dosis', sans-serif;
-$font-family-h6: 'Open Sans', sans-serif;
-$font-family-navbar: 'Dosis';
+$body-font-family: "Lato", sans-serif;
+$font-family-h2: "Dosis";
+$font-family-h3: "Dosis", sans-serif;
+$font-family-h6: "Open Sans", sans-serif;
+$font-family-navbar: "Dosis";
 
 /* FONT SIZES*/
 $body-font-size: 14px;
@@ -66,12 +64,10 @@ $body-font-size-sm: 13px;
 $font-size-h2-sm: 30px;
 $font-size-h3-sm: 16px;
 $font-size-h6-sm: 16px;
-$font-size-navbar-sm: 14px;
-
+$font-size-navbar-sm: 13 px;
 
 $body-font-size-xs: 12px;
 $font-size-h2-xs: 26px;
 $font-size-h3-xs: 16px;
 $font-size-h6-xs: 16px;
 $font-size-navbar-xs: 14px;
-
