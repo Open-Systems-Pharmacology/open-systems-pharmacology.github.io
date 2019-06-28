@@ -1,12 +1,12 @@
 @import "variables";
 
-@mixin headline ($size, $lineheight, $color: $primary) {
+@mixin headline($size, $lineheight, $color: $primary) {
   font-size: $size;
   line-height: $lineheight;
   color: $color;
 }
 
-@mixin logoimage ($imageurl, $width, $height) {
+@mixin logoimage($imageurl, $width, $height) {
   background-image: url($imageurl);
   width: $width;
   height: $height;
@@ -14,41 +14,45 @@
   background-repeat: no-repeat;
 }
 
-@mixin flexcontainer () {
+@mixin flexcontainer() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin action-button($backgroundColor:$default-button-action-background-color, $hoverColor:$default-button-action-hover-color, $textColor:$default-button-action-text-color){
+@mixin action-button(
+  $backgroundColor: $default-button-action-background-color,
+  $hoverColor: $default-button-action-hover-color,
+  $textColor: $default-button-action-text-color
+) {
   background: $backgroundColor;
-  text-transform:uppercase;
-  width:176px;
-  height:49px;
-  text-align:center;
-  line-height:49px;
-  font-size:16px;
-  color:$textColor;
-  border-radius:3px;
-  font-family:'Dosis';
+  text-transform: uppercase;
+  width: 176px;
+  height: 49px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 16px;
+  color: $textColor;
+  border-radius: 3px;
+  font-family: "Dosis";
   font-weight: 600;
   letter-spacing: 2px;
   a {
     color: $textColor;
   }
-  
+
   @include easeLinear;
-  
+
   &:hover,
   &:focus,
   &:active {
-    background:$hoverColor;
+    background: $hoverColor;
   }
 }
 
-@mixin background-image($image, $defaultColor){
-	background:$defaultColor;
-	background-image: url('../img/' + $image);
+@mixin background-image($image, $defaultColor) {
+  background: $defaultColor;
+  background-image: url("../img/"+$image);
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -82,9 +86,14 @@
   }
 }
 
-
 @mixin medium-2 {
   @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media only screen and (max-width: 1024px) {
     @content;
   }
 }
@@ -96,15 +105,15 @@
 }
 
 @mixin large-2 {
-  @media only screen and (min-width: 1201px){
+  @media only screen and (min-width: 1201px) {
     @content;
   }
 }
 
-@mixin background-png-3x ($image) {
+@mixin background-png-3x($image) {
   background-repeat: no-repeat;
   background-image: url("#{$imagesPath}#{$image}.png");
-  
+
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     background-image: url("#{$imagesPath}#{$image}@2x.png");
     background-size: 100%;
@@ -112,68 +121,75 @@
   @media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 216dpi) {
     background-image: url("#{$imagesPath}#{$image}@3x.png");
     background-size: 100%;
-  }  
+  }
 }
 
-@mixin size ($w, $h) {
-  width: $w; 
+@mixin size($w, $h) {
+  width: $w;
   height: $h;
 }
 
-@mixin border-radius ($r) {
-  -webkit-border-radius: $r; 
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
   -moz-border-radius: $r;
-  -o-border-radius: $r; 
-  -ms-border-radius: $r; 
+  -o-border-radius: $r;
+  -ms-border-radius: $r;
   border-radius: $r;
 }
 
-@mixin easeLinear ($time: 0.2s, $easing: linear, $props: all) {
-  transition: $props $time $easing 0s;    
-  -moz-transition: $props $time $easing 0s;    
-  -moz-transition: $props $time $easing 0s;    
+@mixin easeLinear($time: 0.2s, $easing: linear, $props: all) {
+  transition: $props $time $easing 0s;
+  -moz-transition: $props $time $easing 0s;
+  -moz-transition: $props $time $easing 0s;
 }
 
-@mixin rotating ($time: 9s) {
-  animation-name: ani-rotate; 
-  animation-duration: $time; 
+@mixin rotating($time: 9s) {
+  animation-name: ani-rotate;
+  animation-duration: $time;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@mixin section_area_outer($imageName){
-  background:url(../img/#{$imageName}.png) no-repeat right bottom;
+@mixin section_area_outer($imageName) {
+  background: url(../img/#{$imageName}.png) no-repeat right bottom;
   background-size: 800px;
-  
+
   @media only screen and (min-width: 1201px) and (max-width: 1366px) {
-    background-size: 700px;  
-  };
-  
+    background-size: 700px;
+  }
 
   @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    background-size: 500px;  
-  };
-  
+    background-size: 500px;
+  }
+
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    background-size: 400px;  
-  };
-  
+    background-size: 400px;
+  }
+
   @media only screen and (max-width: 767px) {
     background-size: 90% auto;
     -webkit-background-size: 90% auto;
     padding-bottom: 70%;
-  };
-  
+  }
 }
 
 @keyframes ani-rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes ani-thrust-line {
-  0% { height: 3px; }
-  20% { height: 15px; }
-  100% { height: 3px; }
+  0% {
+    height: 3px;
+  }
+  20% {
+    height: 15px;
+  }
+  100% {
+    height: 3px;
+  }
 }
-

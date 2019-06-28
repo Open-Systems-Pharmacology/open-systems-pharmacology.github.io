@@ -43,6 +43,11 @@ nav {
           padding: 15px 9px;
         }
 
+        @include ipad {
+          font-size: $font-size-navbar-xs;
+          padding: 15px 8px;
+        }
+
         &:hover {
           color: $default-link-hover-color;
         }
