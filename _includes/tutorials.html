@@ -4,11 +4,11 @@
     <div class="section_area">
       <div class="row">
         {% assign rows = site.tutorials.size | divided_by: 2.0 | ceil %}
-        <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+        <div class="col-lg-6 col-sm-6" data-aos="fade-right">
           {% for tutorial in site.tutorials limit: rows %}
           <div class="item-list">
             <div class="item-col1"><span><i class="fa fa-{{tutorial.icon}}"></i></span></div>
-            
+
             <div class="item-col2">
               <h3><a href="{{tutorial.full_url}}" target="_blank">{{tutorial.title}}</a></h3>
               <p>{{tutorial.description}}</p>
@@ -16,25 +16,25 @@
           </div>
           {% endfor %}
         </div>
-        
-        <div class="col-lg-6 col-sm-6 wow fadeInRight delay-05s">
+
+        <div class="col-lg-6 col-sm-6" data-aos="fade-left">
           {% for tutorial in site.tutorials offset: rows %}
           <div class="item-list">
-              <div class="item-col1"><span><i class="fa fa-{{tutorial.icon}}"></i></span></div>
-              <div class="item-col2">
-                <h3><a href="{{tutorial.full_url}}" target="_blank">{{tutorial.title}}</a></h3>
-                <p>{{tutorial.description}}</p>
+            <div class="item-col1"><span><i class="fa fa-{{tutorial.icon}}"></i></span></div>
+            <div class="item-col2">
+              <h3><a href="{{tutorial.full_url}}" target="_blank">{{tutorial.title}}</a></h3>
+              <p>{{tutorial.description}}</p>
             </div>
           </div>
           {% endfor %}
         </div>
       </div>
-      
-      <div class="action_button"> 
-        <span>Take a look at all our tutorials</span> 
-        <a href="http://tutorials.{{site.base}}/" target="_blank">Browse</a> 
+
+      <div class="action_button">
+        <span>Take a look at all our tutorials</span>
+        <a href="http://tutorials.{{site.base}}/" target="_blank">Browse</a>
       </div>
-      
+
     </div>
   </div>
 </section>
