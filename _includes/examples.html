@@ -3,7 +3,7 @@
     <h2>Publications &amp; Models</h2>
     <div class="section_area">
       <div class="row">
-        <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+        <div class="col-lg-6 col-sm-6" data-aos="fade-right">
           <h4 class="category">Models</h4>
           {% for example in site.examples %}
           <div class="item-list">
@@ -14,8 +14,8 @@
           </div>
           {% endfor %}
         </div>
-        
-        <div class="col-lg-6 col-sm-6 wow fadeInRight delay-05s">
+
+        <div class="col-lg-6 col-sm-6" data-aos="fade-left">
           <h4 class="category">Publications</h4>
           {% for publication in site.publications %}
           <div class="item-list">
@@ -27,12 +27,12 @@
           {% endfor %}
         </div>
       </div>
-      
-      <div class="action_button"> 
-        <span>Take a look at all our models</span> 
-        <a href="http://osp-models.{{site.base}}/" target="_blank">Browse</a> 
+
+      <div class="action_button">
+        <span>Take a look at all our models</span>
+        <a href="http://osp-models.{{site.base}}/" target="_blank">Browse</a>
       </div>
-      
+
     </div>
   </div>
 </section>
