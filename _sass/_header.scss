@@ -2,6 +2,11 @@ nav {
   background: $header-background-color;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 
+  &.navbar-fixed-top {
+    @include ipad {
+      position: absolute;
+    }
+  }
   &.navbar-default .navbar-toggle {
     border-color: $theme-color1;
     background-color: $theme-color1;
