@@ -1,0 +1,47 @@
+.conference {
+    background-color: $conference-background-color;
+    text-align: center;
+
+
+    div {
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 17px;
+        color: $body-text-color;
+        margin: 0px;
+
+        @include small {
+            font-size: 16px;
+        }
+    }
+
+    .conference-description {
+        text-align: left;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .conference-row {
+        display: flex;
+        justify-content: center;
+        padding: 0 32px;
+        margin-bottom: 60px;
+    }
+
+    .conference-button {
+        @include action-button($body-text-color, #f4f4f4, black);
+
+        border: 1px solid $newsletter-background-color;
+        border-radius: 4px;
+
+        @include mobile {
+            width: 100%;
+            max-width: 280px;
+            margin-bottom: 60px;
+        }
+    }
+}
