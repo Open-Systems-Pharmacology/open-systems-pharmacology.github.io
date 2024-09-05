@@ -22,6 +22,19 @@
         margin-bottom: 40px;
     }
 
+    img.sponsor {
+        &.gold {
+            width: 356px;
+        }
+        &.silver {
+            width: 300px;
+        }
+        &.bronze {
+            width: 178px;
+        }
+        margin: 15px;
+    }
+
     .full-width {
         width: 100%;
     }
