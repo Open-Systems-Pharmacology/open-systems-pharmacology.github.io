@@ -1,6 +1,6 @@
 ---
 title: SATELLITE WORKSHOPS AT PAGE 2025
-description: Join ESQlabs team at PAGE to learn more about PBPK modeling and the new features of Version 12 of OSP.
+description: Join ESQlabs team at PAGE to learn more about PBPK modeling and the new features of Version 12 of OSP Suite.
 icon: book
 github_url: Forum/discussions/1934
 ---
