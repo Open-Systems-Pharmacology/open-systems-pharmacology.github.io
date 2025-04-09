@@ -6,9 +6,6 @@ conference_2024 :
       - name: Welcome from the OSP Management Team
         url: assets/conference_2024/Session 0-1_Welcome.pdf
         icon: file-pdf-o
-      - name: Roots and Leafs
-        url: assets/conference_2024/Session 0-2_Lippert - Roots & Leafs.pdf
-        icon: file-pdf-o
       - name: The “Leaves” of the OSP Suite
         url: assets/conference_2024/Session 0-3_Schaller - Roots & Leafs.pdf
         icon: file-pdf-o
@@ -20,9 +17,6 @@ conference_2024 :
         icon: file-pdf-o
       - name: "Extending the OSP oral absorption toolbox: An end-to-end Physiology-Based Biopharmaceutics Modeling (PBBM) approach"
         url: assets/conference_2024/Session 1-2_Vrenken - Extending the OSP oral absorption toolbox.pdf
-        icon: file-pdf-o
-      - name: Combination of in vitro and in silico tools for biopharmaceutical risk assessment in drug product development
-        url: assets/conference_2024/Session 1-3_Winter - Combination of in vitro and in silico tools for biopharmaceutical risk assessment.pdf
         icon: file-pdf-o
 
     - session-name: "Session II: In Vitro-In Vivo Extrapolation"
@@ -54,9 +48,6 @@ conference_2024 :
 
     - session-name: "Session V: Drug-Drug Interaction Modeling"
       presentations: 
-      - name: "PBPK DDI Network Qualification and Regulatory Application"
-        url: assets/conference_2024/Session 5-1_Wendl - PBPK DDI Network Qualification and Regulatory Application.pdf
-        icon: file-pdf-o
       - name: "Optimal Use of Static and Dynamic Models for DDI Assessment along the Value Chain"
         url: assets/conference_2024/Session 5-2_Peters - Optimal Use of Static and Dynamic Models for DDI Assessment.pdf
         icon: file-pdf-o
@@ -86,9 +77,6 @@ conference_2024 :
       presentations: 
       - name: "Modeling Motherhood I: Pregnancy PBPK in the Era of Personalized Medicine"
         url: assets/conference_2024/Session 8-1_Dallmann - Pregnancy PBPK in the Era of Personalized Medicine.pdf
-        icon: file-pdf-o
-      - name: "Modeling Motherhood II: Pregnancy PBPK for Asthma"
-        url: assets/conference_2024/Session 8-2_Job - An approach to modeling drug exposure during lactation.pdf
         icon: file-pdf-o
       - name: "Modeling Motherhood III: Lactation PBPK modeling"
         url: assets/conference_2024/Session 8-3_Macante - Lactation PBPK modeling.pdf
