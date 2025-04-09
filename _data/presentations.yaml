@@ -1,0 +1,98 @@
+conference_2024 :
+  sessions:
+
+    - session-name: Welcome & Keynote
+      presentations: 
+      - name: Welcome from the OSP Management Team
+        url: assets/conference_2024/Session 0-1_Welcome.pdf
+        icon: file-pdf-o
+      - name: Roots and Leafs
+        url: assets/conference_2024/Session 0-2_Lippert - Roots & Leafs.pdf
+        icon: file-pdf-o
+      - name: The “Leaves” of the OSP Suite
+        url: assets/conference_2024/Session 0-3_Schaller - Roots & Leafs.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session I: Physiologically Based Biopharmaceutics Modelling (PBBM)"
+      presentations: 
+      - name: "Leveraging OSP for developing dissolution safe space through IVIVC and VBE workflows: a qualification perspective"
+        url: assets/conference_2024/Session 1-1_Guimaraes Sa Correia - Leveraging OSP for developing dissolution safe-space through IVIVC and VBE workflows.pdf
+        icon: file-pdf-o
+      - name: "Extending the OSP oral absorption toolbox: An end-to-end Physiology-Based Biopharmaceutics Modeling (PBBM) approach"
+        url: assets/conference_2024/Session 1-2_Vrenken - Extending the OSP oral absorption toolbox.pdf
+        icon: file-pdf-o
+      - name: Combination of in vitro and in silico tools for biopharmaceutical risk assessment in drug product development
+        url: assets/conference_2024/Session 1-3_Winter - Combination of in vitro and in silico tools for biopharmaceutical risk assessment.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session II: In Vitro-In Vivo Extrapolation"
+      presentations: 
+      - name: "Towards an OSP IVIVE toolbox"
+        url: assets/conference_2024/Session 2-1_Proenca - Towards an OSP IVIVE toolbox.pdf
+        icon: file-pdf-o
+      - name: "Organ-on-a-Chip (OoC) Mechanistic Model for Estimating Small Molecules’ Human Hepatic Clearance and PK Profiles"
+        url: assets/conference_2024/Session 2-2_Siak-Leng - OoC Digital Twins for Estimating LMW Human Hepatic Clearance and PK Profiles.pdf
+        icon: file-pdf-o
+      - name: Prediction of human fraction absorbed from in vitro Caco-2 permeability – are we there yet?
+        url: assets/conference_2024/Session 2-3_Feick - Prediction of human fa from in vitro Caco-2 permeability.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session III: Perspectives on the use of PBPK in regulatory submission"
+      presentations: 
+      - name: "Exploring Recent Trends in PBPK Applications in New Drug Approvals in Japan"
+        url: assets/conference_2024/Session 3-2_Sato - Exploring Recent Trends in PBPK Applications in NDA in Japan.pdf
+        icon: file-pdf-o
+      - name: "Current use of physiologically based pharmacokinetic modelling in new medicinal product approvals at EMA"
+        url: assets/conference_2024/Session 3-3_Colin - EMA review of assessments of PBPK models from regulatory submissions.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session IV: Integrated PBPK-PD/QSP modeling"
+      presentations: 
+      - name: "Introducing OSMOSES: Modularization and Qualification of complex PB-QSP models with OSP version 12"
+        url: assets/conference_2024/Session 4-1_Balazki - Modularization and Qualification of complex PB-QSP models.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session V: Drug-Drug Interaction Modeling"
+      presentations: 
+      - name: "PBPK DDI Network Qualification and Regulatory Application"
+        url: assets/conference_2024/Session 5-1_Wendl - PBPK DDI Network Qualification and Regulatory Application.pdf
+        icon: file-pdf-o
+      - name: "Optimal Use of Static and Dynamic Models for DDI Assessment along the Value Chain"
+        url: assets/conference_2024/Session 5-2_Peters - Optimal Use of Static and Dynamic Models for DDI Assessment.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session VI: PBPK Best Practice & Introduction to the ICH MIDD Guidance"
+      presentations: 
+      - name: "ICH M15 - Model Informed Drug Development (MIDD):Steps Toward Harmonized Guideline"
+        url: assets/conference_2024/Session 6-1_Frey - ICH M15 Model Informed Drug Development.pdf
+        icon: file-pdf-o
+      - name: "Best Practices in Physiologically based Pharmacokinetic modeling"
+        url: assets/conference_2024/Session 6-2_Schlender - PBPK best practices.pdf
+        icon: file-pdf-o
+      - name: "The FDA Model Master File: Standardization of M&S practices to support the development and approval of dermatological products"
+        url: assets/conference_2024/Session 6-3_Hamadeh - The FDA Model Master File.pdf
+        icon: file-pdf-o
+        
+    - session-name: "Session VII: Large Molecules Modeling"
+      presentations: 
+      - name: "PBPK-QSP modelling of FcRn Inhibitors and the use of the PK-Sim FcRn Mode"
+        url: assets/conference_2024/Session 7-1_De Witte - FcRn modelling in the OSP suite.pdf
+        icon: file-pdf-o
+      - name: "Modeling Subcutaneous Absorption & Immunogenicity of Large Molecules"
+        url: assets/conference_2024/Session 7-2_Sjoegren Benamara - Modeling SC Absorption Immunogenicity of Large Molecules.pdf
+        icon: file-pdf-o
+        
+    - session-name: "Session VIII: Special Populations in the OSP Suite"
+      presentations: 
+      - name: "Modeling Motherhood I: Pregnancy PBPK in the Era of Personalized Medicine"
+        url: assets/conference_2024/Session 8-1_Dallmann - Pregnancy PBPK in the Era of Personalized Medicine.pdf
+        icon: file-pdf-o
+      - name: "Modeling Motherhood II: Pregnancy PBPK for Asthma"
+        url: assets/conference_2024/Session 8-2_Job - An approach to modeling drug exposure during lactation.pdf
+        icon: file-pdf-o
+      - name: "Modeling Motherhood III: Lactation PBPK modeling"
+        url: assets/conference_2024/Session 8-3_Macante - Lactation PBPK modeling.pdf
+        icon: file-pdf-o
+      - name: "PBPK Modeling for Hepatically Impaired Patients"
+        url: assets/conference_2024/Session 8-4_Schneider - PBPK Modeling for Hepatically Impaired Patients.pdf
+        icon: file-pdf-o

@@ -172,6 +172,9 @@ p{
     padding:0 0 0 0;
     font-size:15px;
 		margin-bottom:40px;
+		&.single-line{
+			margin-bottom:10px;
+		}
 
 		@include small {
 			font-size:14px;
