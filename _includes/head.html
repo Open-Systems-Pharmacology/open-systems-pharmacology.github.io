@@ -17,11 +17,11 @@
   <meta name="author" content="Open Systems Pharmacology Community">
   <meta name="google-site-verification" content="0gpyRIUG4sXyVouz5wI2B9qdPMmQG_Vq0j3_kBu7-14" />
 
-  <link rel="stylesheet" type="text/css" href="/css/ospsuite.css">
-  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="/css/slick/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="/css/aos.css">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/ospsuite.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/font-awesome.min.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/slick/slick.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/slick/slick-theme.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/aos.css' | relative_url }}">
 
   <style>
     .slick-prev:before,
@@ -30,14 +30,14 @@
     }
   </style>
 
-  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon" />
 
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon@2x.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-ipad@2x.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon@3x.png">
+  <link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png | relative_url }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ '/img/apple-touch-icon-ipad.png | relative_url }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ '/img/apple-touch-icon@2x.png | relative_url }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ '/img/apple-touch-icon-ipad@2x.png | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/apple-touch-icon@3x.png | relative_url }}">
 
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:image" content="/img/og-image.jpg" />
@@ -51,8 +51,8 @@
   <meta name="twitter:image" content="{{site.url}}/img/twitter-card-image.png" />
 
   <link
-    href='https://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic'
+    href="{{ 'https://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic' | relative_url }}"
     rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet'
-    type='text/css'>
+  <link href="{{ 'https://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' | relative_url }}"
+  rel='stylesheet' type='text/css'>
 </head>

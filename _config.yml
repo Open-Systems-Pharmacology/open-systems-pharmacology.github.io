@@ -3,7 +3,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Reliable, powerful and easy-to-use modeling &amp; simulation tools for pharmaceutical 
   and other life-sciences applications. Qualified and accepted by the scientific community 
   including academia, regulatory agencies and industry. Available free to everyone.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/open-systems-pharmacology.github.io" # the subpath of your site, e.g. /blog
 url: http://www.open-systems-pharmacology.org # the base hostname & protocol for your site, e.g. http://example.com
 base: open-systems-pharmacology.org # the base hostname & protocol for your site, e.g. http://example.com
 github: https://github.com/Open-Systems-Pharmacology/
