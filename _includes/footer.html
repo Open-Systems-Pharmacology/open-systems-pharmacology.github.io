@@ -1,12 +1,20 @@
 <footer id = "footer" class="footer">
   <div class="container">
-    <a href="{{site.url}}" class="footer-logo"></a>
+    <a href="{{ '/' | relative_url }}" class="footer-logo"></a>
     <ul class="footer-menu">
       <li><a href="{{site.github_suite_master}}LICENSE" target="_blank">License</a></li>
       <li><a href="{{site.github_suite_master}}CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct" target="_blank">Code of Conduct</a></li>
       <li><a href="{{site.github_suite_master}}CONTRIBUTING.md#ways-to-contribute" target="_blank">Contributing</a></li>
-      <li class="icon-github"><a href="{{site.github}}" target="_blank">GitHub</a></li>
-      <li class="icon-twitter"><a href="https://twitter.com/{{site.twitter_username}}" target="_blank">Twitter</a></li>
+      <li>
+        <a href="{{site.github}}" target="_blank">
+          <img src="{{ '/img/icon-github.svg' | relative_url }}" alt="GitHub" class="footer-icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/{{site.twitter_username}}" target="_blank">
+          <img src="{{ '/img/icon-twitter.svg' | relative_url }}" alt="Twitter" class="footer-icon">
+        </a>
+      </li>
     </ul>
   </div>
 </footer>

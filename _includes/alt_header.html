@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/#intro">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
         <img alt="Open Systems Pharmacology" class="logo" src="img/osp_logo.png">
       </a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#osp-navbar-collapse">
@@ -17,23 +17,23 @@
     <div class="collapse navbar-collapse" id="osp-navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden">
-          <a href="/#intro"></a>
+          <a href="{{ '/' | relative_url }}"></a>
         </li>
-        <li><a href="/#essentials">Essentials</a></li>
-        <li><a href="/#news">News &amp; Release</a></li>
+        <li><a href="{{ '#essentials' | relative_url }}">Essentials</a></li>
+        <li><a href="{{ '#news' | relative_url }}">News &amp; Release</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             Resources
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a href="/#tutorials">Tutorials</a></li>
-            <li><a href="/#examples">Publications &amp; Models</a></li>
+            <li><a href="{{ '#tutorials' | relative_url }}">Tutorials</a></li>
+            <li><a href="{{ '#examples' | relative_url }}">Publications &amp; Models</a></li>
           </ul>
         </li>
-        <li><a href="/#team">Management Team</a></li>
-        <li><a href="/#newsletter">Newsletter</a></li>
-        <li><a href="/conference.html">Conference</a></li>
+        <li><a href="{{ '#team' | relative_url }}">Management Team</a></li>
+        <li><a href="{{ '#newsletter' | relative_url }}">Newsletter</a></li>
+        <li><a href="{{ '/conference.html' | relative_url }}">Conference</a></li>
       </ul>
     </div>
   </div>

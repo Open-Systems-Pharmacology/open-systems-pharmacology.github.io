@@ -8,7 +8,7 @@
           {% for member in shuffled_team %}
           <div class="team-member">
             <a href="{{ member.link_url }}" target="_blank">
-              <img src="{{ member.profile_url }}" />
+              <img src="{{ member.profile_url | relative_url }}" />
               <h3 class="member-name">{{ member.name }}</h3>
               <p class="member-description">{{ member.description }}</p>
             </a>
@@ -16,7 +16,6 @@
           {% endfor %}
         </div>
       </div>
-
     </div>
   </div>
 </section>
