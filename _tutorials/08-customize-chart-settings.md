@@ -4,6 +4,6 @@ description: >
   This tutorial presents some advanced chart customization features using chart settings and
   templates. Chart templates can be saved and reused to streamline your modelling workflows
   in PK-Sim® and MoBi®.
-full_url: "http://www.systems-biology.com/uploads/pics/Charts.mp4"  
+full_url: "https://github.com/Open-Systems-Pharmacology/OSP-based-publications-and-content/issues/120"  
 icon: film
 ---

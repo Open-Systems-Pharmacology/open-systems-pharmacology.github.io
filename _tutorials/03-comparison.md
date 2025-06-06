@@ -5,6 +5,6 @@ description: >
   respect to their input parameter values and quickly determine differences. Also learn how to
   determine which simulation parameter values may differ from the original building block used
   to create the simulation.
-full_url: "http://www.systems-biology.com/uploads/pics/Comparison_01.mp4"
+full_url: "https://github.com/Open-Systems-Pharmacology/OSP-based-publications-and-content/issues/121"
 icon: film  
 ---
