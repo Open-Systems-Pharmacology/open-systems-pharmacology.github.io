@@ -32,6 +32,10 @@ div.conference-section {
             width: 178px;
         }
         margin: 15px;
+        &.no-pad {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 
     .full-width {
