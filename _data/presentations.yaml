@@ -84,3 +84,9 @@ conference_2024 :
       - name: "PBPK Modeling for Hepatically Impaired Patients"
         url: assets/conference_2024/Session 8-4_Schneider - PBPK Modeling for Hepatically Impaired Patients.pdf
         icon: file-pdf-o
+        
+    - session-name: "Session IX: Community Engagement – OSP Suite Qualification & Release"
+      presentations: 
+      - name: "OSP Software Release Management and (Re-)Qualification Framework"
+        url: assets/conference_2024/Session 9-1_Solodenko - OSP Software Release Management and (Re-)Qualification Framework.pdf
+        icon: file-pdf-o
