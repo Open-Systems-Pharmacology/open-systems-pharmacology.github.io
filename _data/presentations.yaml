@@ -1,3 +1,65 @@
+conference_2025 :
+  sessions:
+
+    - session-name: Welcome & Keynote
+      presentations: 
+      - name: Welcome from the OSP CC 25
+        url: assets/conference_2025/OSP CC_Welcome_Schaller.pdf
+        icon: file-pdf-o
+    - session-name: "Session I & II - Clinical Applications and Development"
+      presentations: 
+      - name: "Human Intestinal Organoids and Potential Application for PBPK Modeling"
+        url: assets/conference_2025/1.OSP_2025_Yunhai_Cui.pdf
+        icon: file-pdf-o
+      - name: "Growing a Community-built Qualified OSP-Model Library"
+        url: assets/conference_2025/2. Denise Feick Growing a Community-built Qualified OSP-model library_final.pdf
+        icon: file-pdf-o
+      - name: "PK-SIM AND R FOR PBBM AND VBE - INTRODUCTION TO VIRTUAL BIOEQUIVALENCE WORKFLOWS"
+        url: assets/conference_2025/3. VBE_course_talk_Abdullah_Hamadeh.pdf
+        icon: file-pdf-o
+      - name: "Bridging In Vitro Dissolution and In Vivo Pharmacokinetics: Application of a Novel PBBM Workflow to Vericiguat"
+        url: assets/conference_2025/6_Paul_Vrenken_Andre_Dallmann.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session III: Research and Development"
+      presentations: 
+      - name: "Accelerating Drug Discovery: systematic application of PBPK/PD modelling supporting candidate selection"
+        url: assets/conference_2025/1. OSP CC- Gregori Gerebtzoff - HT-PBPK - 2025-09-30.pdf
+        icon: file-pdf-o
+      - name: "Insights on Predicting PK from Chemical Structure by Combining Machine Learning with Mechanistic Modeling"
+        url: assets/conference_2025/2. OSP conference_Gruber.pdf
+        icon: file-pdf-o
+      - name: "Integrating In Vitro and In Silico Approaches Enables Accurate Prediction of Drug-Induced Liver Injury"
+        url: assets/conference_2025/3. ReneGeci DILI.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session IV: Integrated PBPK-PD/QSP modeling"
+      presentations: 
+      - name: "Tools and workflows for automated reporting of PBPK modeling with OSP"
+        url: assets/conference_2025/1.2 Ghazal OSPS_conf_2025.pdf
+        icon: file-pdf-o
+      - name: "PBPK Modelling in Regulatory Submissions to the MHRA"
+        url: assets/conference_2025/2.Andrew Butler - PBPK Modelling in Regulatory Submissions to the MHRA.pdf
+        icon: file-pdf-o
+      - name: "Software Verification, Validation, and (CoU) Qualification of Open Source M&S Software for Regulatory Use in Translational Model-Informed Drug Development"
+        url: assets/conference_2025/OSP CC_Schaller_OSP Verification, Validation, and Qualification.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session V: Emerging areas"
+      presentations: 
+      - name: "Building a Qualifiable MIDD Ecosystem with modular PBPK and QSP Models in OSP V12"      
+        url: assets/conference_2025/1. Pavel and SS MIDD_Ecosystem_Balazki.pdf
+        icon: file-pdf-o
+      - name: "PBPK-PD for siRNAs - An OSP implementation for Drug Disposition and Efficacy analyses"      
+        url: assets/conference_2025/2. Erik_Sjogren_OSPConference-2025_noNotes.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session VI: Roadmap"
+      presentations: 
+      - name: "OSP Software Release Roadmap"
+        url: assets/conference_2025/OSP_Roadmap_Balazki_Schaller.pdf
+        icon: file-pdf-o
+
 conference_2024 :
   sessions:
 
