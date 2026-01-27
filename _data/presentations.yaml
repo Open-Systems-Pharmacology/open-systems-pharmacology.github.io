@@ -152,3 +152,6 @@ conference_2024 :
       - name: "OSP Software Release Management and (Re-)Qualification Framework"
         url: assets/conference_2024/Session 9-1_Solodenko - OSP Software Release Management and (Re-)Qualification Framework.pdf
         icon: file-pdf-o
+
+conference_2026 :
+  sessions:
