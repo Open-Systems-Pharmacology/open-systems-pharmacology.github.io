@@ -149,7 +149,7 @@ Yes. The OSP website at [open-systems-pharmacology.org](https://www.open-systems
 
 ### Are there example projects?
 
-Yes. Over **30 real-world examples** in PK-Sim and MoBi, as well as simulations in R, are available in the [OSP PBPK Model Library](https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library). Access is free for academia.
+Yes. Over **30 real-world examples** in PK-Sim and MoBi, as well as simulations in R, are available in the [OSP PBPK Model Library](https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library).
 
 ### Are there workshops or training events?
 
