@@ -300,7 +300,7 @@ Yes. The project is built on three core pillars:
 - **Open Science** — The community jointly develops scientific concepts, applications, and best practices.
 
 ---
-## 9. GitHub for Beginners (Especially Non‑Programmers)
+## 9. GitHub for Beginners (Especially Non-Programmers)
 
 ### What is GitHub, and how can I learn to use it?
 
