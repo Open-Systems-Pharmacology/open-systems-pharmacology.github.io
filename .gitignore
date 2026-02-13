@@ -6,3 +6,4 @@ vendor/
 design/
 Gemfile.lock
 .DS_Store
+.claude

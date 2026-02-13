@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+<body>
+
+  {% include alt_header.html %}
+
+  {% capture faq_content %}{% include faq.md %}{% endcapture %}
+  {% assign faq_html = faq_content | markdownify %}
+
+  <section id="faq" class="section faq">
+    <div class="faq-container">
+      <!-- Sidebar Navigation - Generated from markdown h2 headers -->
+      <aside class="faq-sidebar">
+        <nav class="faq-nav">
+          <div class="faq-nav-title">Categories</div>
+          <div class="faq-nav-search">
+            <input type="text" id="faq-search" placeholder="Search FAQ..." aria-label="Search FAQ">
+          </div>
+          <ul class="faq-nav-list" id="faq-nav-list">
+            <!-- Populated by JavaScript from the content -->
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="faq-content">
+        <header class="faq-header">
+          <h1>Open Systems Pharmacology — FAQ</h1>
+          <p>A frequently asked questions guide for users getting started with the OSP Suite, organized from beginner to advanced topics.</p>
+        </header>
+
+        <!-- FAQ content container - will be transformed by JavaScript -->
+        <div id="faq-raw-content" style="display: none;">
+          {{ faq_html }}
+        </div>
+
+        <div id="faq-categories">
+          <!-- Categories will be rendered here by JavaScript -->
+        </div>
+
+        <!-- Quick Reference Links -->
+        <div class="faq-quick-reference" id="faq-quick-reference" style="display: none;">
+          <!-- Will be populated if Quick Reference section exists -->
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  {% include footer.html %}
+
+  {% include cookie.html %}
+
+  {% include ga.html %}
+
+  <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="js/site.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script>
+  (function() {
+    // Category icons mapping
+    const categoryIcons = {
+      'overview': 'fa-info',
+      'installation': 'fa-download',
+      'setup': 'fa-download',
+      'understanding': 'fa-cogs',
+      'tools': 'fa-cogs',
+      'tutorials': 'fa-graduation-cap',
+      'learning': 'fa-graduation-cap',
+      'community': 'fa-users',
+      'support': 'fa-users',
+      'contributing': 'fa-code-fork',
+      'governance': 'fa-sitemap',
+      'validation': 'fa-check-circle',
+      'qualification': 'fa-check-circle',
+      'advanced': 'fa-rocket',
+      'default': 'fa-question-circle'
+    };
+
+    function getIconForCategory(title) {
+      const lowerTitle = title.toLowerCase();
+      for (const [key, icon] of Object.entries(categoryIcons)) {
+        if (lowerTitle.includes(key)) {
+          return icon;
+        }
+      }
+      return categoryIcons.default;
+    }
+
+    function slugify(text) {
+      return text.toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/--+/g, '-')
+        .trim();
+    }
+
+    // Parse the raw markdown-converted HTML
+    const rawContent = document.getElementById('faq-raw-content');
+    const categoriesContainer = document.getElementById('faq-categories');
+    const navList = document.getElementById('faq-nav-list');
+    const quickRefContainer = document.getElementById('faq-quick-reference');
+
+    // Create a temporary container to parse the HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = rawContent.innerHTML;
+
+    // Find all h2 elements (categories) and h3 elements (questions)
+    const elements = tempDiv.querySelectorAll('h1, h2, h3, p, ul, ol, table, pre, hr');
+
+    let categories = [];
+    let currentCategory = null;
+    let currentQuestion = null;
+    let isQuickReference = false;
+
+    elements.forEach((el, index) => {
+      // Skip the main h1 title and intro paragraph
+      if (el.tagName === 'H1') {
+        return;
+      }
+
+      // Skip horizontal rules
+      if (el.tagName === 'HR') {
+        return;
+      }
+
+      if (el.tagName === 'H2') {
+        // Check if this is the Quick Reference section
+        if (el.textContent.toLowerCase().includes('quick reference')) {
+          isQuickReference = true;
+          return;
+        }
+
+        isQuickReference = false;
+
+        // New category - extract title without number prefix
+        const fullTitle = el.textContent.trim();
+        const title = fullTitle.replace(/^\d+\.\s*/, '');
+        const slug = slugify(title);
+
+        currentCategory = {
+          title: title,
+          slug: slug,
+          icon: getIconForCategory(title),
+          questions: []
+        };
+        categories.push(currentCategory);
+        currentQuestion = null;
+      } else if (el.tagName === 'H3' && currentCategory && !isQuickReference) {
+        // New question
+        currentQuestion = {
+          question: el.textContent.trim(),
+          answerHtml: ''
+        };
+        currentCategory.questions.push(currentQuestion);
+      } else if (currentQuestion && !isQuickReference) {
+        // Add to current question's answer
+        currentQuestion.answerHtml += el.outerHTML;
+      } else if (isQuickReference) {
+        // Add to quick reference
+        quickRefContainer.innerHTML += el.outerHTML;
+      }
+    });
+
+    // If we found quick reference content, show the container
+    if (quickRefContainer.innerHTML.trim()) {
+      quickRefContainer.style.display = 'block';
+      // Add the heading
+      const heading = document.createElement('h2');
+      heading.textContent = 'Quick Reference Links';
+      quickRefContainer.insertBefore(heading, quickRefContainer.firstChild);
+    }
+
+    // Build the navigation and content
+    categories.forEach((category, catIndex) => {
+      // Add to navigation
+      const navItem = document.createElement('li');
+      navItem.className = 'faq-nav-item';
+      navItem.innerHTML = `<a href="#${category.slug}" class="faq-nav-link">${category.title}</a>`;
+      navList.appendChild(navItem);
+
+      // Create category section
+      const section = document.createElement('section');
+      section.id = category.slug;
+      section.className = 'faq-category';
+
+      let questionsHtml = '';
+      category.questions.forEach((q, qIndex) => {
+        questionsHtml += `
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">${q.question}</button>
+            <div class="faq-answer">${q.answerHtml}</div>
+          </div>
+        `;
+      });
+
+      section.innerHTML = `
+        <h2 class="faq-category-title">
+          <span class="category-icon"><i class="fa ${category.icon}"></i></span>
+          ${category.title}
+        </h2>
+        <div class="faq-list">
+          ${questionsHtml}
+        </div>
+      `;
+
+      categoriesContainer.appendChild(section);
+    });
+
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        if (isOpen) {
+          item.classList.remove('open');
+          answer.classList.remove('show');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('open');
+          answer.classList.add('show');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('faq-search');
+    const categoryElements = document.querySelectorAll('.faq-category');
+
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      const allFaqItems = document.querySelectorAll('.faq-item');
+
+      if (!searchTerm) {
+        // Show all items and collapse them
+        allFaqItems.forEach(item => {
+          item.style.display = '';
+          item.classList.remove('open');
+          item.querySelector('.faq-answer').classList.remove('show');
+          item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        categoryElements.forEach(category => {
+          category.style.display = '';
+        });
+        return;
+      }
+
+      categoryElements.forEach(category => {
+        const items = category.querySelectorAll('.faq-item');
+        let hasVisibleItems = false;
+
+        items.forEach(item => {
+          const question = item.querySelector('.faq-question').textContent.toLowerCase();
+          const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+          if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            item.style.display = '';
+            hasVisibleItems = true;
+
+            // Auto-expand matching items
+            if (!item.classList.contains('open')) {
+              item.classList.add('open');
+              item.querySelector('.faq-answer').classList.add('show');
+              item.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+            }
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        category.style.display = hasVisibleItems ? '' : 'none';
+      });
+    });
+
+    // Active navigation link on scroll
+    const navLinks = document.querySelectorAll('.faq-nav-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-100px 0px -50% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    categoryElements.forEach(category => {
+      observer.observe(category);
+    });
+
+    // Smooth scroll for nav links
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+
+</html>
