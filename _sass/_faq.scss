@@ -5,10 +5,10 @@
 .faq {
   background-color: $section-background-color;
   min-height: 100vh;
-  padding-top: 60px;
+  padding-top: 100px;
 
   @include medium {
-    padding-top: 40px;
+    padding-top: 80px;
   }
 }
 
