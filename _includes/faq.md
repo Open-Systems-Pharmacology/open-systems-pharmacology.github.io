@@ -5,11 +5,11 @@ A frequently asked questions guide for users getting started with the OSP Suite,
 
 ---
 
-## 1. General Overview
+## 1. Overview
 
 ### What is the Open Systems Pharmacology (OSP) Suite?
 
-The OSP Suite is a collection of open-source software tools for physiologically based pharmacokinetic (PBPK) modeling and simulation in pharmaceutical and life-sciences applications. The suite is the result of over 15 years of development and was made open-source in early 2017. It is free to use and available to everyone — academia, regulatory agencies, and industry alike.
+The OSP Suite is a collection of open-source software tools for physiologically based pharmacokinetic (PBPK) and Quantitative Systems Pharmacology (QSP) modeling and simulation in pharmaceutical and life-sciences applications. The suite is the result of over 25 years of development and was made open-source in early 2017. It is free to use and available to everyone — academia, regulatory agencies, and industry alike.
 
 ### What tools are included in the OSP Suite?
 
@@ -39,8 +39,8 @@ Download installation packages from [setup.open-systems-pharmacology.org](http:/
 
 1. Download and run `OSPSuite-Full.X.Y.Z.exe` (e.g., `OSPSuite-Full.12.0.397.exe`).
 2. Follow the instructions in the installation wizard — default settings work in most cases.
-3. Restart your computer after installation.
-4. Download PK-Sim gene expression databases and configure them (see PK-Sim Options in the documentation).
+3. Restart your computer after installation if required.
+4. Download PK-Sim gene expression databases and configure them (see [PK-Sim Options](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-options) in the documentation).
 
 **Note:** Administrator rights are required for installation. If you don't have admin rights, ask your IT administrator to install it.
 
@@ -50,20 +50,26 @@ Yes. Both PK-Sim and MoBi can be installed as stand-alone packages to reduce dis
 
 ### What are the system requirements?
 
-The OSP Suite runs on **Windows** and requires:
-
-- **.NET Framework** — If PK-Sim or MoBi crashes immediately on startup, install the .NET Framework.
-- **C++ Runtime Redistributable** — If simulations crash (but the program starts fine), install the C++ Runtime.
-
-These components are typically already present on most Windows machines.
+The OSP Suite runs on **Windows**. The full installer includes all necessary components.
 
 ### Is there a portable version?
 
-Yes, a portable version is available (particularly useful for R users). Before extracting the downloaded archive, you must right-click the file, select "Properties," and check the "Unblock" checkbox — Windows Defender blocks applications from untrusted sources by default.
+Yes, portable versions are available (particularly useful for R users). Before extracting the downloaded archive, you must right-click the file, select "Properties," and check the "Unblock" checkbox — Windows Defender blocks applications from untrusted sources by default.
+
+**Notes for Portable Versions:**
+
+- Portable versions do not affect the installed OSP Suite and do not interfere with each other.
+- If you only need one tool (e.g., only PK-Sim) — there is no need to download another portable tool(s).
+- PK-Sim and MoBi rely on some common Windows components: .NET Framework and C++ Runtime Redistributable. In most cases these components are already installed on the target machine. In the very unlikely case that they aren't:
+  - If PK-Sim (or MoBi) Portable crashes immediately on startup: The .NET Framework is missing. Download and install it from [here](https://go.microsoft.com/fwlink/?LinkID=863265).
+  - If the program starts and you can create a simulation, but running a simulation crashes: The C++ Runtime is missing. Download and install it from [here](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+- If you use the functionality "Send to MoBi" in PK-Sim: you have to enter the location of MoBi.exe (portable) in the program options (vice versa for MoBi).
+- When you double-click a PK-Sim or MoBi project in Windows Explorer — it will always start the installed application (the one installed with the full OSP Suite setup), not one of the portables.
+- If you are using the OSP Qualification Runner (as part of the OSP Qualification Framework) — the path to the portable PK-Sim folder must be passed as an argument, otherwise the installed version will be used.
 
 ### Does the OSP Suite work with Excel and R?
 
-The OSP Suite includes interfaces to **MS Excel®** and **R**, but these are separate programs that must be installed independently. You need Excel and/or R already installed on your machine to use their respective interfaces.
+The OSP Suite includes interfaces to **MS Excel®** and **R**, but these are separate programs that must be installed independently. You need R already installed on your machine to use its interface. For importing/exporting of Excel files no Excel installation is required.
 
 ---
 
@@ -96,10 +102,12 @@ The OSP ecosystem provides several R packages for scripted workflows:
 | Package | Purpose |
 |---|---|
 | **ospsuite** | Core package — load, manipulate, and simulate models from PK-Sim/MoBi |
-| **tlf** | Create standardized reporting Tables, Listings, and Figures |
+| **ospsuite.plots** | Create standardized reporting Tables, Listings, and Figures |
 | **ospsuite.reportingengine** | Automated generation of qualification/evaluation reports |
 | **ospsuite.parameteridentification** | Parameter identification (fitting models to observed data) |
 | **ospsuite.utils** | Utility functions shared across the OSP R ecosystem |
+
+More details on the OSP R packages landscape (including short descriptions of further packages) is given under [R_PACKAGES.md](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/R_PACKAGES.md).
 
 ### How do I install the OSPSuite-R packages?
 
@@ -124,7 +132,7 @@ No. The `ospsuite` package creates .NET objects (e.g., simulations) that **canno
 
 ---
 
-## 4. Tutorials & Learning Resources
+## 4. Tutorials & Learning
 
 ### Where do I start as a complete beginner?
 
@@ -142,7 +150,7 @@ Yes. The OSP website at [open-systems-pharmacology.org](https://www.open-systems
 
 ### Are there example projects?
 
-Yes. Over **30 real-world examples** in PK-Sim and MoBi, as well as simulations in R, are available. Access is free for academia.
+Yes. Over **30 real-world examples** in PK-Sim and MoBi, as well as simulations in R, are available in the [OSP PBPK Model Library](https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library). Access is free for academia.
 
 ### Are there workshops or training events?
 
@@ -172,6 +180,10 @@ A GitHub account is required to post. The forum is actively moderated by OSP com
 
 Yes. The OSP team encourages everyone to read the documentation before opening a new issue or discussion. Many common questions are already covered in the official docs.
 
+### How can I upload a model?
+
+If you want to contribute a PBPK model to the OSP community, follow the guidelines in [CREATING_MODEL_REPOSITORY.md](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CREATING_MODEL_REPOSITORY.md).
+
 ### How do I report bugs?
 
 Use the GitHub issue tracker in the relevant repository (e.g., [PK-Sim issues](https://github.com/Open-Systems-Pharmacology/PK-Sim/issues), [MoBi issues](https://github.com/Open-Systems-Pharmacology/MoBi/issues), or the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/discussions)).
@@ -182,23 +194,25 @@ Subscribe to the OSP Forum to receive updates on new software releases, models, 
 
 ---
 
-## 6. Contributing to the Project
+## 6. Contributing
 
 ### How can I contribute?
 
 The OSP project welcomes contributions. You can contribute by:
 
-- **Fixing documentation** — Each page on the docs site corresponds to a GitHub file you can edit directly.
 - **Reporting issues** — Submit bugs or feature requests via GitHub issues.
 - **Submitting code changes** — Fork a repository, make changes, and submit a pull request.
 - **Sharing models** — Contribute PBPK models and qualification scenarios.
 - **Participating in discussions** — Help answer questions in the forum.
+- **Improving documentation** — Submit pull requests to the docs repository.
+
+If you are a software developer, you can find the developer documentation at [dev.open-systems-pharmacology.org](https://dev.open-systems-pharmacology.org/).
 
 ### How do I contribute to the documentation?
 
 1. You need a **GitHub account** (free).
-2. Navigate to the docs site — each page has a link to its corresponding GitHub file.
-3. Edit the file and submit a **pull request**.
+2. Fork the [docs repository](https://github.com/Open-Systems-Pharmacology/docs) and make your changes.
+3. Submit a **pull request**.
 4. The documentation core team will review your changes and provide feedback if needed.
 
 For adding entirely new content, open an issue in the docs repository first to discuss what you want to add.
@@ -207,11 +221,11 @@ Full contribution guide: [docs.open-systems-pharmacology.org/how-to-contribute](
 
 ---
 
-## 7. Governance & Decision-Making
+## 7. Governance
 
 ### Who manages the OSP project?
 
-The OSP project has a structured governance model with four distinct roles:
+The OSP project has a structured governance model with distinct roles, as described in the [User Roles and Responsibilities](https://dev.open-systems-pharmacology.org/software-engineering-transparency-and-security/overview/user-roles-and-responsibilities) documentation:
 
 - **Users** — Anyone using OSP software, models, or content.
 - **Contributing Community Members** — Active contributors to the development of OSP content (code, models, documentation).
@@ -222,7 +236,7 @@ The OSP project has a structured governance model with four distinct roles:
 
 The **Management Team** is responsible for regular review, endorsement, and publication of the OSP development roadmap. They oversee and steer all activities, including certification of the software platform, models, parameter databases, and qualification processes. The **Sounding Board** advises on scientific and technological decisions.
 
-For code contributions, changes go through GitHub pull requests and are reviewed before merging. The continuous development of the suite runs on GitHub and can be monitored by everyone in real time.
+For code contributions, changes go through GitHub pull requests and are reviewed by the members of the OSP Sounding Board and OSP Core Developers teams before merging. The continuous development of the suite runs on GitHub and can be monitored by everyone in real time.
 
 ### What is AGAH and what is its relationship to OSP?
 
@@ -230,20 +244,11 @@ AGAH (Arbeitsgemeinschaft für Angewandte Humanpharmakologie e.V.) is the Associ
 
 ### Where can I find the development roadmap?
 
-The OSP development roadmap is maintained on GitHub: [github.com/Open-Systems-Pharmacology/Roadmap](https://github.com/Open-Systems-Pharmacology/Roadmap). The Management Team is responsible for its regular review and publication.
+The OSP development roadmap is maintained on GitHub: [github.com/Open-Systems-Pharmacology/Roadmap](https://github.com/Open-Systems-Pharmacology/Roadmap) and the [OSP Suite Project Board](https://github.com/orgs/Open-Systems-Pharmacology/projects/29). The Management Team is responsible for its regular review and publication.
 
 ---
 
-## 8. Software Engineering, Security & Quality
-
-### How is code quality maintained?
-
-The OSP Suite follows rigorous software engineering practices:
-
-- **Continuous Integration (CI)** — Building of OSP libraries and setups is fully automated via integration of CI services (AppVeyor) with GitHub. The build environments are standardized and nobody except CI administrators can modify them.
-- **Multi-layered testing** — Unit tests and integration tests are triggered with every software build. Slower integration/module/systems tests run periodically (e.g., nightly). Full testing and code coverage reports are publicly accessible for each build.
-- **Code review** — Changes are submitted via GitHub pull requests and reviewed before being merged.
-- **Static code analysis** — Code quality analysis tools (including static analysis and test coverage) run as part of the CI pipeline.
+## 8. Validation & Qualification
 
 ### How is the software validated?
 
@@ -255,27 +260,19 @@ Validation includes:
 - Testing of new features by scientific experts — creating simulation scenarios and comparing results with published study data
 - The **Installation Validator** tool enables "1-Click" validation of an OSP Suite installation on any target computer
 
-### Is the OSP Suite transparent?
+### How is the software qualified for intended use?
 
-Yes. The project is built on three core pillars:
-
-- **Open Source** — All source code is publicly available on GitHub. Development can be monitored by everyone in real time.
-- **Open Access** — High-quality software, models, and data sets are provided free of license costs.
-- **Open Science** — The community jointly develops scientific concepts, applications, and best practices.
-
-### Is the software qualified for regulatory use?
-
-The OSP community places strong emphasis on qualification for regulatory acceptance. They establish fully transparent processes for qualification and software validation to certify compliance with regulatory standards. The **Qualification Framework** automates validation of modeling scenarios, and several qualification repositories for drug-drug interactions and pediatric applications have been published on GitHub.
+The OSP community places strong emphasis on qualification for regulatory acceptance. They establish fully transparent processes for qualification and software validation to certify compliance with regulatory standards. The **Qualification Framework** automates qualification of modeling scenarios, and several qualification repositories for drug-drug interactions and pediatric applications have been published on GitHub.
 
 The Management Team provides certification of platform versions, and the OSP Suite is qualified and accepted by the scientific community including regulatory agencies.
 
----
-
-## 9. Advanced Topics
+Qualification for intended use is described in detail under:
+- [Qualification for Intended Use](https://dev.open-systems-pharmacology.org/software-engineering-transparency-and-security/overview/software-engineering#qualification-for-intended-use)
+- [General Qualification of the PBPK Platform](https://dev.open-systems-pharmacology.org/software-engineering-transparency-and-security/overview/software-engineering#general-qualification-of-the-pbpk-platform)
 
 ### What is the Qualification Framework?
 
-The Qualification Framework enables automated validation of modeling scenarios supported by the OSP platform. It is used to verify results when releasing new versions of the OSP Suite. The workflow involves:
+The Qualification Framework enables automated qualification of modeling scenarios supported by the OSP platform. It is also used for the requalification of the platform when releasing new versions of the OSP Suite. The workflow involves:
 
 1. A **qualification plan** (stored in a GitHub repository) links models, data, and scenarios using PK-Sim project snapshots.
 2. The **Qualification Runner** (stand-alone tool) processes the plan and exports project parts.
@@ -284,6 +281,27 @@ The Qualification Framework enables automated validation of modeling scenarios s
 **Note:** The Qualification Framework and R packages are not included in the main OSP Suite installer and must be installed separately.
 
 Documentation: [docs.open-systems-pharmacology.org — Qualification](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/qualification)
+
+### How is code quality maintained?
+
+The OSP Suite follows rigorous software engineering practices:
+
+- **Continuous Integration (CI)** — Building of OSP libraries and setups is fully automated via integration of CI services (GitHub Actions) with GitHub. The build environments are standardized and nobody except CI administrators can modify them. CI is described in detail under [Continuous Integration](https://dev.open-systems-pharmacology.org/software-engineering-transparency-and-security/overview/software-engineering#continuous-integration).
+- **Multi-layered testing** — Unit tests and integration tests are triggered with every software build. Slower integration/module/systems tests run periodically (e.g., nightly). Full testing and code coverage reports are publicly accessible for each build.
+- **Code review** — Changes are submitted via GitHub pull requests and reviewed before being merged.
+- **Static code analysis** — Code quality analysis tools (including static analysis and test coverage) run as part of the CI pipeline.
+
+### Is the OSP Suite transparent?
+
+Yes. The project is built on three core pillars:
+
+- **Open Source** — All source code is publicly available on GitHub. Development can be monitored by everyone in real time.
+- **Open Access** — High-quality software, models, and data sets are provided free of license costs.
+- **Open Science** — The community jointly develops scientific concepts, applications, and best practices.
+
+---
+
+## 9. Advanced Topics
 
 ### What is Parameter Identification?
 
