@@ -1,4 +1,3 @@
-
 # Open Systems Pharmacology (OSP) Suite — FAQ
 
 A frequently asked questions guide for users getting started with the OSP Suite, organized from beginner to advanced topics.
@@ -227,10 +226,11 @@ Full contribution guide: [docs.open-systems-pharmacology.org/how-to-contribute](
 
 The OSP project has a structured governance model with distinct roles, as described in the [User Roles and Responsibilities](https://dev.open-systems-pharmacology.org/software-engineering-transparency-and-security/overview/user-roles-and-responsibilities) documentation:
 
-- **Users** — Anyone using OSP software, models, or content.
-- **Contributing Community Members** — Active contributors to the development of OSP content (code, models, documentation).
-- **Sounding Board** — Supports the management team on scientific and technological matters.
-- **Management Team** — The OSP Management Team is a project group of **AGAH e.V.** (Arbeitsgemeinschaft für Angewandte Humanpharmakologie / Association for Applied Human Pharmacology). The management team is responsible for the development roadmap, formal releases of certified OSP Suite versions, best practices, and coordination of all community activities.
+- **Management Team (MT)** — The OSP Management Team is a project group of **AGAH e.V.** (Arbeitsgemeinschaft für Angewandte Humanpharmakologie / Association for Applied Human Pharmacology). The MT oversees community and OSP membership management, handles regular review, endorsement, and publication of the roadmap, certifies qualifications, manages platform releases, and coordinates external communications.
+- **Sounding Board (SB)** — Provides expert analysis by examining scientific and technical content and identifying emerging trends. They serve as consultants offering guidance to leadership.
+- **Core Developers (DEV)** — Handles the technical backbone: development and testing of the OSP software platform and tools, along with evaluating and integrating proposed modifications into the codebase.
+- **OSP Community Members** — Create substantive contributions including data and models, software requirements, methods, best practices, qualification frameworks, and training material. They also participate in testing, validation, and knowledge-sharing activities.
+- **Users** — Engage with the platform and content while providing feedback. They contribute by reporting observations, needs, and issues, and participate in community discussions and support forums.
 
 ### Who decides what changes get made?
 
@@ -244,7 +244,7 @@ AGAH (Arbeitsgemeinschaft für Angewandte Humanpharmakologie e.V.) is the Associ
 
 ### Where can I find the development roadmap?
 
-The OSP development roadmap is maintained on GitHub: [github.com/Open-Systems-Pharmacology/Roadmap](https://github.com/Open-Systems-Pharmacology/Roadmap) and the [OSP Suite Project Board](https://github.com/orgs/Open-Systems-Pharmacology/projects/29). The Management Team is responsible for its regular review and publication.
+The OSP development roadmap is maintained on GitHub: [github.com/Open-Systems-Pharmacology/Roadmap](https://github.com/Open-Systems-Pharmacology/Roadmap) and the [OSP Suite Software Roadmap](https://github.com/orgs/Open-Systems-Pharmacology/projects/29). The Management Team is responsible for its regular review and publication.
 
 ---
 
