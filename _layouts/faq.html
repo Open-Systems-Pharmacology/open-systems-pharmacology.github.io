@@ -112,8 +112,9 @@
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = rawContent.innerHTML;
 
-    // Find all h2 elements (categories) and h3 elements (questions)
-    const elements = tempDiv.querySelectorAll('h1, h2, h3, p, ul, ol, table, pre, hr');
+    // Parse only top-level blocks to avoid duplicating nested list content
+    const allowedTags = ['H1', 'H2', 'H3', 'P', 'UL', 'OL', 'TABLE', 'PRE', 'HR'];
+    const elements = Array.from(tempDiv.children).filter((el) => allowedTags.includes(el.tagName));
 
     let categories = [];
     let currentCategory = null;
