@@ -300,65 +300,60 @@ Yes. The project is built on three core pillars:
 - **Open Science** — The community jointly develops scientific concepts, applications, and best practices.
 
 ---
-## 9. GitHub for Beginners (Especially Non-Programmers)
+## 9. GitHub for Beginners
 
-### What is GitHub, and how can I learn to use it?
+### What is GitHub?
 
-GitHub can be used without being a programmer - think of it as a place to **store, organize, collaborate on, and publish files** (documents, notes, designs, datasets, etc.), with a clear history of changes.
+GitHub is a website where people and teams keep files in **repositories** (folders/projects), track changes over time, and collaborate (comments, reviews, suggestions). You don't need to be a programmer to use it — think of it as a place to **store, organize, collaborate on, and publish files** (documents, notes, designs, datasets, etc.), with a clear history of changes.
 
-- Essentials (Start Here)
-  - What is GitHub, in plain language?
-    - GitHub is a website where people and teams keep files in **repositories** (folders/projects), track changes over time, and collaborate (comments, reviews, suggestions).
-    
-  - What should I learn first?
-    - Start with a hands-on “Hello World” walkthrough, then learn the basic collaboration workflow used across GitHub.
-    
-    - Essentials: **[Hello World Example](https://docs.github.com/en/get-started/start-your-journey/hello-world)**
-    
-    - Bit more details: **[GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)** 
-    (the usual “branch → change → pull request → review → merge” pattern)  
-    
-  - What do “issues” and “pull requests” mean? (Non-programmer translation)
-    - **Issue**: a task, question, or idea thread (like a to-do item with discussion).
-    - **Pull request (PR)**: “I made changes; please review and add them.” It’s a review + approval step before changes become official.
+### What should I learn first?
 
-### What is (GitHub-flavored) Markdown, and how can I learn it?
+Start with a hands-on "Hello World" walkthrough, then learn the basic collaboration workflow used across GitHub.
 
-- Mastering Markdown (Writing on GitHub)
-  - Do I need to learn Markdown?
-    - If you write README files, documentation, **qualification reports**, notes, or project pages on GitHub: yes - Markdown is the easiest way to format text (headings, lists, links, checklists).
-    - **[Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)**
-  - What “advanced formatting” is worth knowing?
-    - Once you know the basics, you can level up your documents with tables, callouts, and other formatting tools.
-    - **[Working with advanced formatting](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting)**
-    - **[Organizing information with tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)**
-    - Optional deep dives:
-      - **[Writing mathematical expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)**
-      - **[Creating diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)**
+- **[Hello World Example](https://docs.github.com/en/get-started/start-your-journey/hello-world)** — The essential first tutorial
+- **[GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)** — The usual "branch → change → pull request → review → merge" pattern
 
-### Can GitHub be used without complicated command line tools?
+### What do "issues" and "pull requests" mean?
 
-- “No Command Line” Option: GitHub Desktop
-  - Can I use GitHub without the command line?
-    - Yes. **GitHub Desktop** is a beginner-friendly app for working with repositories using buttons and menus (clone, commit, push, pull, branch).
-    - **[Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)**
-    - **[All GitHub Desktop documentation topics](https://docs.github.com/en/desktop)**
+These are GitHub's core collaboration tools:
 
-### What is a Release, and how do I create one in a GitHub repository?
+- **Issue**: A task, question, or idea thread (like a to-do item with discussion).
+- **Pull request (PR)**: "I made changes; please review and add them." It's a review + approval step before changes become official.
 
-- Releases (Sharing Downloadable Versions)
-  - What is a “release” and why would I use it?
-    - A **release** is a published snapshot of a repository—useful for sharing a “version” people can download (documents, templates, packaged files, etc.). Releases are often paired with tags like `v1.0`.
-    - **[Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)**
+### What is Markdown and do I need to learn it?
 
-### Where can I find video tutorials on how to use GitHub and GitHub Desktop?
+If you write README files, documentation, **qualification reports**, notes, or project pages on GitHub: yes — Markdown is the easiest way to format text (headings, lists, links, checklists).
 
-- Optional: Video Tutorials
-  - If you prefer learning by watching:
-    - **[GitHub for Beginners (GitHub’s channel playlist)](https://www.youtube.com/watch?v=-RZ03WHqkaY&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f&index=3)**
-    - **[How to Use GitHub Desktop | Beginner’s Step-by-Step GitHub GUI Tutorial](https://www.youtube.com/watch?v=AYJQi6TyPyU)**
-    - **[GitHub Tutorial for Beginners](https://www.youtube.com/watch?v=v5gnvDUWqFM)**
-    - **[How to Use Git & GitHub Desktop Tutorial for Beginners](https://www.youtube.com/watch?v=MaqVvXv6zrU)**  
+**Getting started:**
+- **[Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)**
+
+**Advanced formatting:**
+- **[Working with advanced formatting](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting)**
+- **[Organizing information with tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)**
+- **[Writing mathematical expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)**
+- **[Creating diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)**
+
+### Can I use GitHub without the command line?
+
+Yes. **GitHub Desktop** is a beginner-friendly app for working with repositories using buttons and menus (clone, commit, push, pull, branch).
+
+- **[Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)**
+- **[All GitHub Desktop documentation topics](https://docs.github.com/en/desktop)**
+
+### What is a release?
+
+A **release** is a published snapshot of a repository — useful for sharing a "version" people can download (documents, templates, packaged files, etc.). Releases are often paired with tags like `v1.0`.
+
+- **[Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)**
+
+### Where can I find video tutorials?
+
+If you prefer learning by watching:
+
+- **[GitHub for Beginners (GitHub's channel playlist)](https://www.youtube.com/watch?v=-RZ03WHqkaY&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f&index=3)**
+- **[How to Use GitHub Desktop - Beginner's Step-by-Step GitHub GUI Tutorial](https://www.youtube.com/watch?v=AYJQi6TyPyU)**
+- **[GitHub Tutorial for Beginners](https://www.youtube.com/watch?v=v5gnvDUWqFM)**
+- **[How to Use Git & GitHub Desktop Tutorial for Beginners](https://www.youtube.com/watch?v=MaqVvXv6zrU)**
 
 ---
 
