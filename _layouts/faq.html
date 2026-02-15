@@ -203,8 +203,13 @@
 
       section.innerHTML = `
         <h2 class="faq-category-title">
-          <span class="category-icon"><i class="fa ${category.icon}"></i></span>
-          ${category.title}
+          <a href="#${category.slug}" class="faq-category-link">
+            <span class="category-icon"><i class="fa ${category.icon}"></i></span>
+            ${category.title}
+          </a>
+          <button type="button" class="faq-copy-link" data-hash="#${category.slug}" aria-label="Copy link to clipboard" title="Copy link to section">
+            <i class="fa fa-clone"></i>
+          </button>
         </h2>
         <div class="faq-list">
           ${questionsHtml}
@@ -320,7 +325,7 @@
       observer.observe(category);
     });
 
-    // Smooth scroll for nav links
+    // Smooth scroll for nav links and update URL
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -331,8 +336,118 @@
           navLinks.forEach(l => l.classList.remove('active'));
           link.classList.add('active');
 
+          // Update URL hash
+          history.pushState(null, null, targetId);
+
           target.scrollIntoView({ behavior: 'smooth' });
         }
+      });
+    });
+
+    // Update URL hash on scroll (debounced)
+    let scrollTimeout;
+    const updateHashOnScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const activeLink = document.querySelector('.faq-nav-link.active');
+        if (activeLink) {
+          const hash = activeLink.getAttribute('href');
+          if (window.location.hash !== hash) {
+            history.replaceState(null, null, hash);
+          }
+        }
+      }, 150);
+    };
+
+    window.addEventListener('scroll', updateHashOnScroll);
+
+    // Handle initial hash on page load
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+
+    // Copy link functionality
+    function showToast(message) {
+      // Remove existing toast if any
+      const existingToast = document.querySelector('.faq-toast');
+      if (existingToast) {
+        existingToast.remove();
+      }
+
+      const toast = document.createElement('div');
+      toast.className = 'faq-toast';
+      toast.textContent = message;
+      document.body.appendChild(toast);
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toast.classList.add('show');
+      });
+
+      // Remove after delay
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+      }, 2000);
+    }
+
+    function copyLinkToClipboard(hash) {
+      const url = window.location.origin + window.location.pathname + hash;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link copied to clipboard!');
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showToast('Link copied to clipboard!');
+      });
+    }
+
+    // Add click handlers to category title links (scroll, update URL, and copy to clipboard)
+    document.querySelectorAll('.faq-category-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const hash = link.getAttribute('href');
+        const target = document.querySelector(hash);
+
+        if (target) {
+          // Update URL
+          history.pushState(null, null, hash);
+
+          // Scroll to section
+          target.scrollIntoView({ behavior: 'smooth' });
+
+          // Update active nav state
+          navLinks.forEach(l => l.classList.remove('active'));
+          const matchingNavLink = document.querySelector(`.faq-nav-link[href="${hash}"]`);
+          if (matchingNavLink) {
+            matchingNavLink.classList.add('active');
+          }
+
+          // Copy to clipboard
+          copyLinkToClipboard(hash);
+        }
+      });
+    });
+
+    // Add click handlers to copy buttons (just copy to clipboard)
+    document.querySelectorAll('.faq-copy-link').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const hash = button.getAttribute('data-hash');
+        copyLinkToClipboard(hash);
       });
     });
   })();
