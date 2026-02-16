@@ -180,6 +180,19 @@
     font-size: 20px;
   }
 
+  .faq-category-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $theme-color2;
+    }
+  }
+
   .category-icon {
     width: 32px;
     height: 32px;
@@ -190,6 +203,35 @@
     justify-content: center;
     color: white;
     font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .faq-copy-link {
+    margin-left: 4px;
+    opacity: 0;
+    color: #c0c0c0;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 3px;
+    transition: opacity 0.15s ease, color 0.15s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      color: $theme-color2;
+    }
+
+    &:active {
+      color: darken($theme-color2, 10%);
+    }
+  }
+
+  &:hover .faq-copy-link,
+  &:focus-within .faq-copy-link,
+  .faq-copy-link:focus {
+    opacity: 1;
   }
 }
 
@@ -489,6 +531,29 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// Toast notification
+.faq-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9999;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
