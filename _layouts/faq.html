@@ -363,10 +363,20 @@
 
     // Handle initial hash on page load
     if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
+      const target = document.getElementById(window.location.hash.substring(1));
       if (target) {
         setTimeout(() => {
           target.scrollIntoView({ behavior: 'smooth' });
+
+          // Mark corresponding nav link as active
+          const hash = window.location.hash;
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === hash) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
         }, 100);
       }
     }
@@ -408,18 +418,22 @@
         textArea.style.opacity = '0';
         document.body.appendChild(textArea);
         textArea.select();
-        document.execCommand('copy');
+        const success = document.execCommand('copy');
         document.body.removeChild(textArea);
-        showToast('Link copied to clipboard!');
+        if (success) {
+          showToast('Link copied to clipboard!');
+        } else {
+          showToast('Failed to copy link');
+        }
       });
     }
 
-    // Add click handlers to category title links (scroll, update URL, and copy to clipboard)
+    // Add click handlers to category title links (scroll and update URL only)
     document.querySelectorAll('.faq-category-link').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const hash = link.getAttribute('href');
-        const target = document.querySelector(hash);
+        const target = document.getElementById(hash.substring(1));
 
         if (target) {
           // Update URL
@@ -434,9 +448,6 @@
           if (matchingNavLink) {
             matchingNavLink.classList.add('active');
           }
-
-          // Copy to clipboard
-          copyLinkToClipboard(hash);
         }
       });
     });

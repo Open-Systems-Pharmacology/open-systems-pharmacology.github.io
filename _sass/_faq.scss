@@ -228,7 +228,9 @@
     }
   }
 
-  &:hover .faq-copy-link {
+  &:hover .faq-copy-link,
+  &:focus-within .faq-copy-link,
+  .faq-copy-link:focus {
     opacity: 1;
   }
 }
