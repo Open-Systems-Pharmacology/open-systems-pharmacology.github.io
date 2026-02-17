@@ -68,9 +68,14 @@ $(document).ready(function () {
   });
 
   setTimeout(function () {
-    $("#cookieConsent").fadeIn(200, 'swing');
+    // Check if user has already accepted cookies
+    if (!localStorage.getItem('cookieConsent')) {
+      $("#cookieConsent").fadeIn(200, 'swing');
+    }
   }, 2000);
   $("#closeCookieConsent, .cookieConsentOK").click(function () {
+    // Store user's consent in localStorage
+    localStorage.setItem('cookieConsent', 'true');
     $("#cookieConsent").fadeOut(200);
   });
 });
