@@ -67,10 +67,32 @@ $(document).ready(function () {
     ]
   });
 
+  // Track consent in memory as fallback when localStorage is unavailable
+  var cookieConsentGiven = false;
+
   setTimeout(function () {
-    $("#cookieConsent").fadeIn(200, 'swing');
+    // Check if user has already accepted cookies
+    try {
+      if (localStorage.getItem('cookieConsent') === 'true') {
+        cookieConsentGiven = true;
+      }
+    } catch (e) {
+      // localStorage unavailable, rely on in-memory flag
+    }
+    
+    if (!cookieConsentGiven) {
+      $("#cookieConsent").fadeIn(200, 'swing');
+    }
   }, 2000);
+  
   $("#closeCookieConsent, .cookieConsentOK").click(function () {
+    // Store user's consent in localStorage and memory
+    cookieConsentGiven = true;
+    try {
+      localStorage.setItem('cookieConsent', 'true');
+    } catch (e) {
+      // If localStorage is unavailable, at least track in memory for this session
+    }
     $("#cookieConsent").fadeOut(200);
   });
 });
