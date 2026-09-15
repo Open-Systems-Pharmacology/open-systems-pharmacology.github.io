@@ -22,6 +22,9 @@ div.conference-section {
     }
 
     img.sponsor {
+        &.platinum {
+            width: 420px;
+        }
         &.gold {
             width: 356px;
         }
