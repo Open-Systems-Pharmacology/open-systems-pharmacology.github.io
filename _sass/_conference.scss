@@ -22,7 +22,7 @@ div.conference-section {
     }
 
     img.sponsor {
-        &.platinum {
+        &.diamond {
             width: 420px;
         }
         &.gold {
@@ -38,6 +38,21 @@ div.conference-section {
         &.no-pad {
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+    }
+
+    h3.sponsor-tier {
+        &.diamond {
+            font-size: 26px;
+        }
+        &.gold {
+            font-size: 22px;
+        }
+        &.silver {
+            font-size: 19px;
+        }
+        &.bronze {
+            font-size: 16px;
         }
     }
 
