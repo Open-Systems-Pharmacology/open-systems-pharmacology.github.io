@@ -1,3 +1,87 @@
+conference_2026 :
+  sessions:
+
+    - session-name: Welcome & Keynote
+      presentations:
+      - name: "Welcome to the 3rd Edition of the OSP Community Conference"
+        url: assets/conference_2026/Session 0-1_Mackie - Welcome to the 3rd OSP Community Conference.pdf
+        icon: file-pdf-o
+      - name: "Welcome Session: Conference Program and the Growing OSP Community"
+        url: assets/conference_2026/Session 0-2_Welcome Session.pdf
+        icon: file-pdf-o
+      - name: "Keynote: Quantitative Systems Pharmacology Models in Health and Disease"
+        url: assets/conference_2026/Session 0-3_Kuepfer - QSP Models in Health and Disease.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session I & II: Clinical Applications and Development"
+      presentations:
+      - name: "Proteomics for NAM-to-Human Translation of Drug Disposition and Toxicity"
+        url: assets/conference_2026/Session 1-1_Prasad - Proteomics for NAM-to-Human Translation.pdf
+        icon: file-pdf-o
+      - name: "Open-Source Sub-Saharan African PBPK Population: Integrating Anatomical, Physiological, and Enzymatic Variability"
+        url: assets/conference_2026/Session 1-2_Lesage - Open-Source Sub-Saharan African PBPK Population.pdf
+        icon: file-pdf-o
+      - name: "Physiologically Based Pharmacokinetic Modeling to Evaluate Hepatic and Intestinal CYP3A4 Ontogeny: Insights from Elexacaftor/Tezacaftor/Ivacaftor in Children with Cystic Fibrosis"
+        url: assets/conference_2026/Session 1-3_Elzinga - PBPK Evaluation of Hepatic and Intestinal CYP3A4 Ontogeny.pdf
+        icon: file-pdf-o
+      - name: "PBPK Modelling of Monoclonal Antibodies in Pediatric Populations"
+        url: assets/conference_2026/Session 2-1_Niederalt - PBPK Modelling of Monoclonal Antibodies in Pediatric Populations.pdf
+        icon: file-pdf-o
+      - name: "A Physiologically Based Biopharmaceutics Modeling (PBBM) Framework Predicting the Particle Drift Effect on Absorption"
+        url: assets/conference_2026/Session 2-2_Vrenken - PBBM Framework Predicting the Particle Drift Effect.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session III: Research and Discovery"
+      presentations:
+      - name: "A Physiologically Based Pharmacokinetic Model to Describe the Placental Transfer of the FcRn Inhibitor Nipocalimab"
+        url: assets/conference_2026/Session 3-1_Vermeulen - PBPK Model of Placental Transfer of Nipocalimab.pdf
+        icon: file-pdf-o
+      - name: "Validation and Refinement of the Large Molecule Biodistribution Model in PK-Sim"
+        url: assets/conference_2026/Session 3-2_De Witte - Large Molecule Biodistribution Model in PK-Sim.pdf
+        icon: file-pdf-o
+      - name: "Combining Machine Learning and High Throughput Physiology-Based Pharmacokinetic Modeling"
+        url: assets/conference_2026/Session 3-3_Alkanat - Combining Machine Learning and HT-PBPK Modeling.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session IV: Submission, Lifecycle and Approval"
+      presentations:
+      - name: "ICH M15 and Regulatory Assessment of Mechanistic Models: Game Changer or Business as Usual?"
+        url: assets/conference_2026/Session 4-1_Musuamba - ICH M15 and Regulatory Assessment of Mechanistic Models.pdf
+        icon: file-pdf-o
+      - name: "Building an EMA-Qualifiable OSP Suite for Enzyme- and Transporter-Mediated DDI Prediction"
+        url: assets/conference_2026/Session 4-2_Michon and Jiang - Building an EMA-Qualifiable OSP Suite for DDI Prediction.pdf
+        icon: file-pdf-o
+      - name: "Elevating PBPK as Primary Evidence: A Collaborative Best-Practice Framework for Regulatory Qualification and ICH M15 Alignment"
+        url: assets/conference_2026/Session 4-3_Chenel and Dallmann - Elevating PBPK as Primary Evidence.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session V: Emerging Areas"
+      presentations:
+      - name: "PBPK Modeling of Radiopharmaceuticals: From Imaging Data to Clinical Insights"
+        url: assets/conference_2026/Session 5-1_Huisman-Siebinga - PBPK Modeling of Radiopharmaceuticals.pdf
+        icon: file-pdf-o
+      - name: "Benchmarking a Mechanistic Anti-Drug Antibody Predictor: Bridging Sequence-Based Prediction with Clinical Data"
+        url: assets/conference_2026/Session 5-2_Selvaggio - Benchmarking a Mechanistic Anti-Drug Antibody Predictor.pdf
+        icon: file-pdf-o
+      - name: "A Modular MoBi Implementation of Bispecific T-Cell Engager Target-Mediated Drug Disposition: One Base QSP Model for In Vitro, Minimal PBPK and Whole-Body PBPK Simulations"
+        url: assets/conference_2026/Session 5-3_Kulesza - Modular MoBi Implementation of Bispecific T-Cell Engager TMDD.pdf
+        icon: file-pdf-o
+
+    - session-name: "Session VI: OSP Software Roadmap"
+      presentations:
+      - name: "OSP Software Roadmap"
+        url: assets/conference_2026/Session 6-1_Balazki - OSP Software Roadmap.pdf
+        icon: file-pdf-o
+
+    - session-name: "OSP Focus Groups"
+      presentations:
+      - name: "Qualification Focus Group"
+        url: assets/conference_2026/Focus Group 1_Qualification Focus Group.pdf
+        icon: file-pdf-o
+      - name: "Community Engagement Focus Group"
+        url: assets/conference_2026/Focus Group 2_Community Engagement Focus Group.pdf
+        icon: file-pdf-o
+
 conference_2025 :
   sessions:
 
@@ -152,6 +236,3 @@ conference_2024 :
       - name: "OSP Software Release Management and (Re-)Qualification Framework"
         url: assets/conference_2024/Session 9-1_Solodenko - OSP Software Release Management and (Re-)Qualification Framework.pdf
         icon: file-pdf-o
-
-conference_2026 :
-  sessions: []
